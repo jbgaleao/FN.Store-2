@@ -14,18 +14,19 @@ namespace FN.Store.UI.Controllers
         private readonly IProdutoRepository _produtoRepository;
         private readonly ITipoDeProdutoRepository _tipoDeProdutoRepository;
 
-        public ProdutosController()
-        {
-            _produtoRepository = new ProdutoRepositoryEF();
-            _tipoDeProdutoRepository = new TipoDeProdutoRepositoryEF();
-        }
+        //public ProdutosController()
+        //{
+        //    _produtoRepository = new ProdutoRepositoryEF();
+        //    _tipoDeProdutoRepository = new TipoDeProdutoRepositoryEF();
+        //}
 
-        public ProdutosController(IProdutoRepository produtoRepository, ITipoDeProdutoRepository tipoDeProdutoRepository)
+        public ProdutosController(
+            IProdutoRepository produtoRepository, 
+            ITipoDeProdutoRepository tipoDeProdutoRepository)
         {
             _produtoRepository = produtoRepository;
             _tipoDeProdutoRepository = tipoDeProdutoRepository;
         }
-
 
 
         public ViewResult Index()
